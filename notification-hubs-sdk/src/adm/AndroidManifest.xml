@@ -2,7 +2,13 @@
     package="com.microsoft.windowsazure.messaging">
 
     <application>
-
+        <service
+            android:name=".notificationhubs.ADMReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.amazon.device.messaging.intent.RECEIVE" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
